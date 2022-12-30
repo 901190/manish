@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: BLACK;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; 
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: 300px; 
+}
+
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>BUSINESS LANDING PAGE</h2>
+  <img src="data:image/png;base64,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" alt="Girl in a jacket" width="100" height="100">
+</header>
+
+<section>
+  <nav>
+      <img src="img_girl.jpg" alt="Girl in a jacket" width="100" height="250">
+  </nav>
+  
+  <article>
+    <h1>About us</h1>
+    <p>A remarkable about page is genuine, approachable, and distinguished. It should give the visitor a glimpse into what working with you might be like. You can include personal interests, stories, and photos that convey the unique story of your business. You may also include information about who’s on your team and what their roles are.
+
+About pages are personal to you and your company, so the structure of your about page will vary based on what you want to highlight. However, you’ll start with the same writing process..</p>
+ <div class="flex-container">
+  <div>section 1<br>
+  A remarkable about page o</div>
+  <div>section 2<br>
+  A remarkable about page o </div>
+  <div>section 3<br>
+  A remarkable about page o </div>  
+  </article>
+ 
+</div>
+</section>
+
+<footer>
+  <center><h2>contact us</h2></center>
+   Fist Name<input type=text><br>
+   Last Name<input type=text><br>
+   Email address<input type=text><br>
+   Reason for contact <input type=text><br>
+   <input type=submit>
+  
+</footer>
+
+</body>
+</html>
+
